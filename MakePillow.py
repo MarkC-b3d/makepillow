@@ -26,18 +26,18 @@
 bl_info = {
     "name": "Make Pillow",
     "description": "Make Pillow in blender with cloth sims and force fields",
-    "author": "Mark C - Fourth Level Studios LTD",
-    "version": (0, 0, 1),
+    "author": "Mark C, Oxervision",
+    "version": (0, 0, 2),
     "blender": (2, 80, 0),
-    "location": "Spacebar",
-    "warning": "2.8 Beta Release",
-    "wiki_url": "http://example.com",
+    "location": "View3D > Add > Mesh",
+    "warning": "",
+    "wiki_url": "https://github.com/blendedmarks/makepillow.py",
     "category": "Add Mesh" }
 
 import bpy
 
 
-class MakePillow(bpy.types.Operator):
+class OBJECT_OT_MakePillow(bpy.types.Operator):
     """Make Pillows The Easy Way"""      # blender will use this as a tooltip for menu items and buttons.
     bl_idname = "object.make_pillow"        # unique identifier for buttons and menu items to reference.
     bl_label = "Make Pillow"         # display name in the interface.
@@ -66,12 +66,22 @@ class MakePillow(bpy.types.Operator):
 
        return {'FINISHED'}            # this lets blender know the operator finished successfully.
 
+
+def menu_func(self, context):
+    self.layout.operator(OBJECT_OT_MakePillow.bl_idname,
+                        text="Make Pillow", icon="PLUGIN")
+
+
 def register():
-    bpy.utils.register_class(MakePillow)
+    bpy.utils.register_class(OBJECT_OT_MakePillow)
+    bpy.types.VIEW3D_MT_mesh_add.append(menu_func)
+
 
 
 def unregister():
-    bpy.utils.unregister_class(MakePillow)
+    bpy.utils.unregister_class(OBJECT_OT_MakePillow)
+    bpy.types.VIEW3D_MT_mesh_add.remove(menu_func)
+
 
 
 # This allows you to run the script directly from blenders text editor
