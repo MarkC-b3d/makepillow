@@ -27,7 +27,7 @@ bl_info = {
     "name": "Make Pillow",
     "description": "Make Pillow in blender with cloth sims and force fields",
     "author": "Mark C, Oxervision",
-    "version": (0, 0, 2),
+    "version": (0, 0, 3),
     "blender": (2, 80, 0),
     "location": "View3D > Add > Mesh",
     "warning": "",
