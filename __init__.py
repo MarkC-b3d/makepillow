@@ -55,7 +55,6 @@ class OBJECT_OT_MakePillow(bpy.types.Operator):
        bpy.ops.mesh.subdivide()
        bpy.ops.object.modifier_add(type='SUBSURF')
        bpy.ops.object.mode_set(mode='OBJECT', toggle=True)
-       bpy.ops.object.modifier_apply(apply_as='DATA')
        bpy.ops.object.shade_smooth()
        bpy.ops.object.modifier_add(type='CLOTH')
        ##Cloth sim settings
