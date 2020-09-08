@@ -1,5 +1,5 @@
 # makepillow.py
-Makes pillows in blender 2.8
+Makes pillows in blender 2.9
 
 DO NOT EXTRACT THE .ZIP ARCHIVE OR ALLOW YOUR ARCHIVE MANAGER TO PERFORM A SIMILAR OPERATION!
 
