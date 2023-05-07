@@ -75,7 +75,7 @@ class OBJECT_OT_MakePillow(bpy.types.Operator):
        bpy.context.object.modifiers["Cloth"].collision_settings.use_collision = True
        bpy.context.object.modifiers["Cloth"].collision_settings.use_self_collision = True
        #Force field settings
-       bpy.data.objects['Field'].field.strength = 200
+       bpy.data.objects['Force'].field.strength = 200
        bpy.ops.screen.frame_jump(end=False)
        bpy.ops.screen.animation_play()
 
