@@ -1,3 +1,7 @@
+#4.2 BROKE THIS ADD-ON
+
+I'm in the process of redoing and adding more features to makepillow 
+
 # makepillow.py
 Makes pillows in blender 3.5+
 
